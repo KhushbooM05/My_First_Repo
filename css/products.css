@@ -1,0 +1,303 @@
+/* Turn on the border-box model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #082B59;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  line-height: 2;
+}
+
+
+/* Make images flexible */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: #59331d;
+  max-width: max-content;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+header {
+  border-bottom: 10px solid #d98555;
+}
+
+/* Navbar styling */
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: right;
+}
+
+nav li {
+  margin: 0 16px 16px 16px;
+  font-size: 21px;
+}
+
+/* Max width on the image in pixels */
+nav .logo img {
+  max-width: 150px;
+}
+
+/* Flex basis on the image container, li */
+nav .logo {  
+  flex-basis: 100%;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+nav a:hover {
+  color: #d98555;
+}
+
+/* Establishes a white background */
+.main-bkgd {
+  background: #ffffff url(/images/gulp-bottom-beans.jpg) repeat-x bottom;
+  padding-bottom: 300px;
+}
+
+/* Sits inside of the white background, centered */
+
+.main {
+  width: 100%;
+  margin: 0 auto; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: auto;
+    padding: 24px;
+    gap: 16px;
+    width:1200px;
+    max-width: 1200px; /* Full width */
+   
+}
+
+h1 {
+  color: black; 
+  font-size: 40px; 
+  font-family: Poppins; 
+  font-weight: 700; 
+  line-height: 60px; 
+  word-wrap: break-word;
+  margin-top: 50px;
+}
+
+.grid-item {
+    background-color: #fff;
+    margin-top: 0;
+    width: 100%;
+    justify-content: center;
+}
+
+.grid-item img {
+display: flex;
+height: 245px;
+flex-direction: column;
+align-items: flex-start;
+gap: 10px;
+align-self: stretch;
+border-radius: 10px;
+width: 100%; /* Make image width responsive */
+}
+.grid-item h2 {
+font-family: Poppins;
+font-size: 26.4px;
+font-style: normal;
+font-weight: 700;
+margin-top: 0;
+  }
+
+.grid-item p{
+width: 100%; /* Make text width responsive */
+color: #000;
+font-family: Lato;
+font-size: 17.6px;
+font-style: normal;
+font-weight: 400;
+line-height: 38.4px;
+text-align: justify;
+
+}
+footer {
+  color: #f2f2f2;
+  text-align: center;
+  border-top: 10px solid #d98555;
+  width: 100%; /* Make footer width responsive */
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+footer p{
+  color: #f2f2f2;
+  font-family: Lato;
+  font-size: 16px;
+}
+footer a {
+  color: #f2f2f2;
+  font-size: 32px;
+  display: block;
+  margin: 0 16px 16px 16px;
+}
+
+/* Responsive Design */
+
+/* Large screens (desktops) */
+@media (min-width: 1024px) {
+  .main{
+    width: 1200px;
+    display: grid;
+    grid-gap: 20px;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
+  }
+}
+/* Medium screens (tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  header{
+    width:1200px;
+  }
+  nav ul {
+    width: 1200px;
+    display:flex;
+    justify-content: center; /* Center the entire navigation bar */
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+  }
+  nav .logo {
+    display:flex;
+    justify-content: center; /* Center the logo */
+  }
+.main-bkgd{
+  width: 1200px;
+}
+  .main{
+    width: 1200px;
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+  }
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    width:100%;
+
+  }
+  
+    .grid-item {
+      flex-basis: 100%;
+      margin: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      align-self: stretch;
+      
+    }
+    .grid-item img {
+      width: 100%;  /* Ensure the image takes full width of its container */
+      height: auto; /* Maintain aspect ratio */
+      display: block; /* Ensures the image is rendered as a block element */
+    }
+    .grid-item p{
+      text-align: left;
+    }
+
+    footer{
+      width:1200px;
+    }
+  }
+
+  /* Mobile screens (small devices) */
+  @media (max-width: 767px) {
+    
+    nav ul {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+    nav .logo {
+    display:flex;
+    justify-content: center; /* Center the entire navigation bar */
+      }
+    .main-bkgd{
+      max-width: 100%;
+    }
+    .main{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+    }
+    .grid-container {
+      grid-template-columns: 1fr; /* 1 column */
+      flex-basis: 100%;
+      width: 100%;
+      display: flex;
+      padding: 24px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      align-self: stretch;
+    }
+    
+      .grid-item {
+      flex-basis: 100%;
+      margin: 16px auto;
+      width: 100%;
+      }
+
+      .grid-item img {
+      width:auto;
+      height: auto; /* Maintain aspect ratio */
+      display: block;
+      }
+      .grid-item p{
+        text-align: left;
+      }
+  
+      footer{
+        max-width: 100%;
+      }
+    }
+  
