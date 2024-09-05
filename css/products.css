@@ -71,7 +71,8 @@ nav a:hover {
 
 /* Establishes a white background */
 .main-bkgd {
-  background: #ffffff url("/images/gulp-bottom-beans.jpg")repeat-x bottom;
+  background-color: #ffffff;
+  background: url("/images/gulp-bottom-beans.jpg")repeat-x bottom;
   padding-bottom: 300px;
 }
 
